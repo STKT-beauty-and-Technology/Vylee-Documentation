@@ -23,6 +23,18 @@ This API updates the address of an existing vendor.
 - **Request URL**: `localhost:9090/vendor/update/address`
 - **Request Method**: `PUT`
 - **Request Body**: JSON object containing updated address details.
+- {
+  "vendorId": 0,
+  "fullName": "string",
+  "salonName": "string",
+  "vendorEmail": "string",
+  "mobileNumber": 0,
+  "vendorAddress": "string",
+  "vendorCountry": "string",
+  "vendorState": "string",
+  "pincode": 0,
+  "vensorCity": "string"
+}
   
 - **Response**: 
   - **Type**: `String`
@@ -84,6 +96,11 @@ This API uploads images to the shop gallery.
 
 - **Request URL**: `localhost:9090/shop/gallery/upload/images`
 - **Request Method**: `POST`
+- {
+  "files": [
+    "string"
+  ]
+}
   
 - **Response**: 
   - **Type**: `String`
@@ -98,6 +115,11 @@ This API uploads videos to the shop gallery. Currently, there is an issue with v
 
 - **Request URL**: `localhost:9090/shop/gallery/upload/videos`
 - **Request Method**: `POST`
+- {
+  "files": [
+    "string"
+  ]
+}
   
 - **Response**: 
   - **Type**: `String`
@@ -114,6 +136,11 @@ This API adds a new category to the listing service.
 
 - **Request URL**: `localhost:9090/listing-service/add/category`
 - **Request Method**: `POST`
+
+- {
+  "categoryId": 0,
+  "categoryName": "string"
+}
   
 - **Response**: 
   - **Type**: `String`
@@ -128,6 +155,15 @@ This API adds a product or service to a specific category.
 
 - **Request URL**: `localhost:9090/listing-service/add-service/{categoryId}`
 - **Request Method**: `POST`
+
+- {
+  "serviceId": 0,
+  "serviceName": "string",
+  "serviceCategory": {
+    "categoryId": 0,
+    "categoryName": "string"
+  }
+}
 - **Path Parameter**:
   - `categoryId`: The ID of the category to which the product or service is being added.
   
@@ -144,6 +180,20 @@ This API adds a sub-product or sub-service to a specific product category.
 
 - **Request URL**: `localhost:9090/listing-service/add-sub/category/{productServiceId}`
 - **Request Method**: `POST`
+
+- {
+  "subCategoryId": 0,
+  "subCategoryName": "string",
+  "serviceProduct": {
+    "serviceId": 0,
+    "serviceName": "string",
+    "serviceCategory": {
+      "categoryId": 0,
+      "categoryName": "string"
+    }
+  },
+  "price": 0
+}
 - **Path Parameter**:
   - `productServiceId`: The ID of the product or service to which the sub-product or sub-service is being added.
   
@@ -165,4 +215,28 @@ This API retrieves and displays all data organized by category.
   
 - **Response**: 
   - **Type**: `JSON`
+  - {
+  "serviceProduct": {
+    "serviceId": 1,
+    "serviceName": "Hair & Style",
+    "serviceCategory": {
+      "categoryId": 1,
+      "categoryName": "FEMALE"
+    }
+  },
+  "productSubCategory": {
+    "subCategoryId": 1,
+    "subCategoryName": "Boy Cut",
+    "serviceProduct": {
+      "serviceId": 1,
+      "serviceName": "Hair & Style",
+      "serviceCategory": {
+        "categoryId": 1,
+        "categoryName": "FEMALE"
+      }
+    },
+    "price": 300
+  },
+  "message": "Data Found..!!"
+}
   - **Description**: Returns a list of all data (products or services) under the specified category.
