@@ -7,6 +7,18 @@ This API registers a new vendor in the system.
 
 - **Request URL**: `localhost:9090/vendor/new/registration`
 - **Request Method**: `POST`
+- {
+  "vendorId": 0,
+  "fullName": "string",
+  "salonName": "string",
+  "vendorEmail": "string",
+  "mobileNumber": 0,
+  "vendorAddress": "string",
+  "vendorCountry": "string",
+  "vendorState": "string",
+  "pincode": 0,
+  "vensorCity": "string"
+}
 - **Request Body**: JSON object containing vendor details (name, email, phone number, etc.)
   
 - **Response**: 
