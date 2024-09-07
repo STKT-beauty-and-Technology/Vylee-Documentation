@@ -1,4 +1,11 @@
 # API Documentation
+# Server-IP- http://54.172.41.93:9090 (prefix)
+# example for testing http://localhost:9090/vendor/new/registration
+TO
+# http://54.172.41.93:9090/vendor/new/registration
+
+# NOTE: Video uploads are currently limited to a maximum size of 4 MB, and image uploads are limited to a maximum size of 5 MB.
+# Do not test OTP and email verification/validation; I am working on it.
 
 ## 1. Vendor Registration
 
