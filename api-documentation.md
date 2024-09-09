@@ -7,6 +7,12 @@ TO
 # NOTE: Video uploads are currently limited to a maximum size of 4 MB, and image uploads are limited to a maximum size of 5 MB.
 # Do not test OTP and email verification/validation; I am working on it.
 
+# EC2 Linux Machine
+  stop and kill the process 
+   * sudo lsof -i :8080 | replace 8080 port to your application port
+   * sudo kill -9 1234
+
+
 ## 1. Vendor Registration
 
 ### Description:
