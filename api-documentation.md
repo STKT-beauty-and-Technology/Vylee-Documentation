@@ -1,5 +1,5 @@
 # API Documentation
-# Server-IP- http://54.172.41.93:9090 (prefix)
+# Server-IP- http://54.224.210.106:9090 (prefix)
 # example for testing http://localhost:9090/vendor/new/registration
 TO
 # http://54.172.41.93:9090/vendor/new/registration
