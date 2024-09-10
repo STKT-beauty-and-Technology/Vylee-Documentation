@@ -159,11 +159,11 @@ This API uploads videos to the shop gallery. Currently, there is an issue with v
 ### Description:
 This API adds a new category to the listing service.
 
-- **Request URL**: `localhost:9090/listing-service/add/category`
+- **Request URL**: `localhost:9090/listing-service/add/category/vendorId`
 - **Request Method**: `POST`
 
 - {
-  "categoryId": 0,
+  
   "categoryName": "string"
 }
   
@@ -178,16 +178,11 @@ This API adds a new category to the listing service.
 ### Description:
 This API adds a product or service to a specific category.
 
-- **Request URL**: `localhost:9090/listing-service/add-service/{categoryId}`
+- **Request URL**: `localhost:9090/listing-service/add-service/{categoryId}/{vendorId}`
 - **Request Method**: `POST`
 
 - {
-  "serviceId": 0,
-  "serviceName": "string",
-  "serviceCategory": {
-    "categoryId": 0,
-    "categoryName": "string"
-  }
+  "serviceName": "string"
 }
 - **Path Parameter**:
   - `categoryId`: The ID of the category to which the product or service is being added.
@@ -203,20 +198,11 @@ This API adds a product or service to a specific category.
 ### Description:
 This API adds a sub-product or sub-service to a specific product category.
 
-- **Request URL**: `localhost:9090/listing-service/add-sub/category/{productServiceId}`
+- **Request URL**: `localhost:9090/listing-service/add-sub/category/{productServiceId}/{vendorId}`
 - **Request Method**: `POST`
 
 - {
-  "subCategoryId": 0,
   "subCategoryName": "string",
-  "serviceProduct": {
-    "serviceId": 0,
-    "serviceName": "string",
-    "serviceCategory": {
-      "categoryId": 0,
-      "categoryName": "string"
-    }
-  },
   "price": 0
 }
 - **Path Parameter**:
@@ -233,7 +219,7 @@ This API adds a sub-product or sub-service to a specific product category.
 ### Description:
 This API retrieves and displays all data organized by category.
 
-- **Request URL**: `localhost:9090/listing-service/category/{categoryName}`
+- **Request URL**: `localhost:9090/listing-service/category/{categoryName}/{vendorId}`
 - **Request Method**: `GET`
 - **Path Parameter**:
   - `categoryName`: The name of the category (e.g., FEMALE, MALE, OTHERS) for which the data is to be displayed.
