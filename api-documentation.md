@@ -266,6 +266,62 @@ This API retrieves and displays all data organized by category.
 }
   - **Description**: Returns a list of all data (products or services) under the specified category.
  
+## 12. Vendor Login
+
+### Description:
+This API allows vendors to log in using their email and password.
+
+- **Request URL**: `localhost:9090/login/withEmailAndPssword/vendorEmail/vendorPassword`
+- **Request Method**: `GET`
+- **Path Parameters**:
+  - `vendorEmail`: The email address of the vendor
+  - `vendorPassword`: The password of the vendor
+  
+- **Response**: 
+  - **Type**: `JSON`
+  - **Description**: Returns a JSON object containing a message and the vendor's registration ID.
+  - **Example**:
+    ```json
+    {
+      "message": "string",
+      "vendorRegistrationId": 0
+    }
+    ```
+
+---
+
+## 13. Reset Password
+
+### Description:
+This API initiates the password reset process by sending a reset OTP to the vendor's email.
+
+- **Request URL**: `localhost:9090/send/reset-otp/vendorEmail`
+- **Request Method**: `GET`
+- **Path Parameter**:
+  - `vendorEmail`: The email address of the vendor requesting a password reset
+  
+- **Response**: 
+  - **Type**: `String`
+  - **Description**: Returns a message confirming that the reset OTP has been sent to the specified email address.
+
+---
+
+## 14. Validate OTP for Password Reset
+
+### Description:
+This API validates the OTP sent for password reset and allows setting a new password.
+
+- **Request URL**: `localhost:9090/validate/OTP/vendorEmail/OTP/Password`
+- **Request Method**: `GET`
+- **Path Parameters**:
+  - `vendorEmail`: The email address of the vendor
+  - `OTP`: The One-Time Password sent to the vendor's email
+  - `Password`: The new password to be set
+  
+- **Response**: 
+  - **Type**: `String`
+  - **Description**: Returns a message confirming the successful validation of the OTP and the password reset.
+
 
 
 # Ashutosh
