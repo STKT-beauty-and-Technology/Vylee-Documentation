@@ -271,7 +271,7 @@ This API retrieves and displays all data organized by category.
 ### Description:
 This API allows vendors to log in using their email and password.
 
-- **Request URL**: `localhost:9090/login/withEmailAndPssword/vendorEmail/vendorPassword`
+- **Request URL**: `http://54.224.210.106:9090/vendor/login/withEmailAndPassword/vendorEmail/vendorPassword`
 - **Request Method**: `GET`
 - **Path Parameters**:
   - `vendorEmail`: The email address of the vendor
@@ -295,7 +295,7 @@ This API allows vendors to log in using their email and password.
 ### Description:
 This API initiates the password reset process by sending a reset OTP to the vendor's email.
 
-- **Request URL**: `localhost:9090/send/reset-otp/vendorEmail`
+- **Request URL**: `http://54.224.210.106:9090/vendor/send/reset-otp/vendorEmail`
 - **Request Method**: `GET`
 - **Path Parameter**:
   - `vendorEmail`: The email address of the vendor requesting a password reset
@@ -311,7 +311,7 @@ This API initiates the password reset process by sending a reset OTP to the vend
 ### Description:
 This API validates the OTP sent for password reset and allows setting a new password.
 
-- **Request URL**: `localhost:9090/validate/OTP/vendorEmail/OTP/Password`
+- **Request URL**: `http://54.224.210.106:9090/vendor/validate/OTP/vendorEmail/OTP/Password`
 - **Request Method**: `GET`
 - **Path Parameters**:
   - `vendorEmail`: The email address of the vendor
