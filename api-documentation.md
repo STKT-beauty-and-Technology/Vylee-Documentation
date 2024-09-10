@@ -11,7 +11,7 @@ TO
   stop and kill the process 
    * sudo lsof -i :8080 | replace 8080 port to your application port
    * sudo kill -9 1234
-   * background runnig Application EC2 : nohup java -jar jarFileName.jar
+   * background running Application EC2 : nohup java -jar jarFileName.jar
 
 
 ## 1. Vendor Registration
