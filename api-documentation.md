@@ -265,3 +265,9 @@ This API retrieves and displays all data organized by category.
   "message": "Data Found..!!"
 }
   - **Description**: Returns a list of all data (products or services) under the specified category.
+ 
+
+
+# Ashutosh
+
+
