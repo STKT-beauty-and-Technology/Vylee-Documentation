@@ -161,7 +161,7 @@ This API uploads videos to the shop gallery. Currently, there is an issue with v
 ### Description:
 This API adds a new category to the listing service.
 
-- **Request URL**: `localhost:9090/listing-service/add/category/vendorId`
+- **Request URL**: `localhost:9090/listing-services/add-category/categoryId`
 - **Request Method**: `POST`
 
 - {
