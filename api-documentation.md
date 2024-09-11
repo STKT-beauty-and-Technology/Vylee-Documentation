@@ -183,7 +183,7 @@ This API adds a new category to the listing service.
 ### Description:
 This API adds a product or service to a specific category.
 
-- **Request URL**: `localhost:9090/listing-service/add-service/{categoryId}/{vendorId}`
+- **Request URL**: `localhost:9090/listing-services/add-service/{categoryId}/{vendorId}`
 - **Request Method**: `POST`
 
 - {
@@ -203,7 +203,7 @@ This API adds a product or service to a specific category.
 ### Description:
 This API adds a sub-product or sub-service to a specific product category.
 
-- **Request URL**: `localhost:9090/listing-service/add-sub/category/{productServiceId}/{vendorId}`
+- **Request URL**: `localhost:9090/listing-services/add-sub/category/{productServiceId}/{vendorId}`
 - **Request Method**: `POST`
 
 - {
@@ -224,7 +224,7 @@ This API adds a sub-product or sub-service to a specific product category.
 ### Description:
 This API retrieves and displays all data organized by category.
 
-- **Request URL**: `localhost:9090/listing-service/category/{categoryName}/{vendorId}`
+- **Request URL**: `localhost:9090/listing-services/category/{categoryName}/{vendorId}`
 - **Request Method**: `GET`
 - **Path Parameter**:
   - `categoryName`: The name of the category (e.g., FEMALE, MALE, OTHERS) for which the data is to be displayed.
