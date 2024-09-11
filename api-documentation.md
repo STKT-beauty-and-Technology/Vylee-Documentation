@@ -174,6 +174,9 @@ This API adds a new category to the listing service.
   - **Description**: Returns a message confirming the successful addition of the category.
 
 ---
+## for Getting All Category 
+- **Request URL**: `http://localhost:9090/listing-services/show/all/category`
+-  **Request Method**: `GET`
 
 ## 9. Add Product or Service Inside Category
 
@@ -310,7 +313,13 @@ This API validates the OTP sent for password reset and allows setting a new pass
   - **Type**: `String`
   - **Description**: Returns a message confirming the successful validation of the OTP and the password reset.
 
+## 15. Add Salon Information
 
+- **Request URL**: `http://localhost:9090/vendor/add/salon/information/vendorId/WhatsappNumber/Description/WebsiteName`
+- **Request Method**: `POST`  
+- **Response**: 
+  - **Type**: `String`
+ 
 
 # Ashutosh
 
