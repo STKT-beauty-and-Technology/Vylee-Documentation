@@ -1,3 +1,4 @@
+* Created By Vivek Raikawar
 # API Documentation
 # Server-IP- http://54.224.210.106:9090 (prefix)
 # example for testing http://localhost:9090/vendor/new/registration
@@ -312,5 +313,46 @@ This API validates the OTP sent for password reset and allows setting a new pass
 
 
 # Ashutosh
+
+### Description:
+## 1.This is working hours and Day submit for database.
+
+ **Request Method**: `POST`
+- **Request URL**: `localhost:9090/api/working-hours/vendorId
+- JSON DATA 
+- {
+  "day": "string",
+  "openTime": "string",
+  "closeTime": "string"
+}
+
+- JSON DATA
+ **Request Method**: `PUT`
+ - **Request URL**: `localhost:9090/api/working-hours/Id
+
+{
+  "day": "string",
+  "openTime": "string",
+  "closeTime": "string"
+}
+
+- JSON DATA
+ **Request Method**: `DELETE`
+ - **Request URL**: `localhost:9090/api/working-hours/Id
+
+- JSON DATA
+ **Request Method**: `PUT`
+ - **Request URL**: `localhost:9090/api/working-hours/Id
+
+- JSON DATA
+ **Request Method**: `GET`
+ - **Request URL**: `localhost:9090/api/working-hours/Id
+
+ - - JSON DATA
+   **Request Method**: `GET`
+ - **Request URL**: `localhost:9090/api/working-hours
+   - 
+ **Response**: 
+  - **Type**: `String`
 
 
