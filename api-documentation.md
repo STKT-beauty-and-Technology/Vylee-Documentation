@@ -361,7 +361,51 @@ This API validates the OTP sent for password reset and allows setting a new pass
     "mobileNumber": 0,
     "address": "string"
   }
+
 ]
+
+## 19.Add Working Hours
+
+- **Request URL**: `http://localhost:9090/listing-services/add/working-hours/vendorId`
+- **Request Method**: `POST`
+- {
+
+  "day": "string",
+  "openTime": "string",
+  "closeTime": "string"
+}
+- **Response**: 
+  - **Type**: String`
+  -
+
+## 20.Update Working Hours
+
+- **Request URL**: `http://localhost:9090/listing-services/update/working-hours/dayId/vendorId`
+- **Request Method**: `PUT`
+- {
+
+  "day": "string",
+  "openTime": "string",
+  "closeTime": "string"
+}
+- **Response**: 
+  - **Type**: String`
+ 
+
+## 21.Upload Business Documents
+
+- **Request URL**: `http://localhost:9090/listing-services/upload/business/documents`
+- **Request Method**: `POST`
+- ![businessDocumentsUpload](https://github.com/user-attachments/assets/4aa9412f-6eba-4a94-a6e5-e02c227e99ca)
+
+- **Response**: 
+  - **Type**: String`
+  
+  ----------------------------------------------------------------------------------------------------------------------------
+  
+  
+
+
  
 
 # Ashutosh
