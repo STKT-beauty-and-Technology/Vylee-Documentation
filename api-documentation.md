@@ -320,6 +320,49 @@ This API validates the OTP sent for password reset and allows setting a new pass
 - **Response**: 
   - **Type**: `String`
  
+   ## 16. get LOGO
+
+- **Request URL**: `http://localhost:9090/vendor/get-logo/vendorId`
+- **Request Method**: `Get`  
+- **Response**: 
+  - **Type**: `IMAGE
+  
+
+  ## 17. Add Bank Account
+
+- **Request URL**: `http://localhost:9090/listing-services/add/bank-account/vendorId`
+- **Request Method**: `POST`  
+- **Response**: 
+  - **Type**: `{
+  "accountHolderName": "string",
+  "bankAccountNumber": 0,
+  "bankName": "string",
+  "ifscCode": "string",
+  "emailAddress": "string",
+  "mobileNumber": 0,
+  "address": "string"
+}`
+
+## 18.Get Bank Account
+
+- **Request URL**: `http://localhost:9090/listing-services/get/all-bank-deatils/vendorId`
+- **Request Method**: `GET`  
+- **Response**: 
+  - **Type**: `List<BankAccount>`
+  - [
+  {
+    "id": 1,
+    "vendorId": 21212,
+    "accountHolderName": "dfdfd",
+    "bankAccountNumber": 0,
+    "bankName": "string",
+    "ifscCode": "string",
+    "emailAddress": "string",
+    "mobileNumber": 0,
+    "address": "string"
+  }
+]
+ 
 
 # Ashutosh
 
