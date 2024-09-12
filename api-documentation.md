@@ -118,22 +118,22 @@ This API checks if a mobile number belongs to a new or existing vendor.
 
 ## 6. Shop Gallery (Images)
 
-### Description:
+### Description: UPLOAD
 This API uploads images to the shop gallery.
 
 - **Request URL**: `localhost:9090/shop/gallery/upload/images`
 - **Request Method**: `POST`
-- {
-  "files": [
-    "string"
-  ]
-}
-  
+
+  ![image response](https://github.com/user-attachments/assets/7794bd6a-c47f-4f18-9d97-f3b962401f00)
+
 - **Response**: 
   - **Type**: `String`
+  - 
   - **Description**: Returns a confirmation message indicating the success or failure of the image upload.
 
----
+## LOAD IMAGE
+ - ![loadImage](https://github.com/user-attachments/assets/b30109cc-8370-4de1-b933-68e841936cd8)
+
 
 ## 7. Shop Gallery (Videos)
 
@@ -142,11 +142,8 @@ This API uploads videos to the shop gallery. Currently, there is an issue with v
 
 - **Request URL**: `localhost:9090/shop/gallery/upload/videos`
 - **Request Method**: `POST`
-- {
-  "files": [
-    "string"
-  ]
-}
+- ![videoUpload](https://github.com/user-attachments/assets/79a6882a-172e-4e27-b286-fd236a9d3bce)
+
   
 - **Response**: 
   - **Type**: `String`
@@ -154,7 +151,10 @@ This API uploads videos to the shop gallery. Currently, there is an issue with v
   
 **Note**: There is a known issue with uploading videos to the database.
 
----
+## LOAD VIDEOS
+
+- 
+![videoLoad](https://github.com/user-attachments/assets/f46cfc07-18ae-4e29-9a2e-c71f596a869e)
 
 ## 8. Add Category (e.g., FEMALE, MEN, OTHERS)
 
