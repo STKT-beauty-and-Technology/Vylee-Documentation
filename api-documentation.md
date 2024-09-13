@@ -400,6 +400,32 @@ This API validates the OTP sent for password reset and allows setting a new pass
 
 - **Response**: 
   - **Type**: String`
+
+
+## 22.Get vendor details based on vendorId
+
+- **Request URL**: `http://localhost:9090/vendor/get/vendor-details/vendorId`
+- **Request Method**: `POST`
+  
+
+- **Response**: 
+  - **Type**: {
+  "message": "string",
+  "vendorRegistrationId": 0,
+  "salonName": "string",
+  "fullName": "string",
+  "vendorEmail": "string",
+  "password": "string",
+  "mobileNumber": 0,
+  "vendorAddress": "string",
+  "vendorCountry": "string",
+  "vendorState": "string",
+  "vendorCity": "string",
+  "pincode": 0,
+  "description": "string",
+  "website": "string",
+  "whatsAppNumber": 0
+}
   
   ----------------------------------------------------------------------------------------------------------------------------
   
