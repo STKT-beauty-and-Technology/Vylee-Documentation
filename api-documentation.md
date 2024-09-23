@@ -1,5 +1,5 @@
 * Created By Vivek Raikawar
-# API Documentation
+# API Documentation | http://54.224.210.106:9090/swagger-ui/index.html
 # Server-IP- http://54.224.210.106:9090 (prefix)
 # example for testing http://localhost:9090/vendor/new/registration
 TO
