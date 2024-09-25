@@ -171,7 +171,12 @@ This API adds a new category to the listing service.
 }
   
 - **Response**: 
-  - **Type**: `String`
+  - **Type**: `{
+  "message": "One Category Added",
+  "vendorId": 20240001,
+  "categoryName": "FEMALE",
+  "categoryId": 1
+}`
   - **Description**: Returns a message confirming the successful addition of the category.
 
 ---
@@ -194,7 +199,13 @@ This API adds a product or service to a specific category.
   - `categoryId`: The ID of the category to which the product or service is being added.
   
 - **Response**: 
-  - **Type**: `String`
+  - **Type**: `{
+  "message": "Service Product Added Successfully",
+  "serviceProductId": 1,
+  "categoryId": 1,
+  "serviceName": "Hair & Style",
+  "vendorId": 20240001
+}`
   - **Description**: Returns a message confirming the successful addition of the product or service.
 
 ---
@@ -209,14 +220,20 @@ This API adds a sub-product or sub-service to a specific product category.
 
 - {
  
-  "subCategoryName": "DEMO",
-  "price": 500.12
+  "subCategoryName": "Bob cut",
+  "price": 400
 }
 - **Path Parameter**:
   - `productServiceId`: The ID of the product or service to which the sub-product or sub-service is being added.
   
 - **Response**: 
-  - **Type**: `String`
+  - **Type**: `{
+  "message": "Sub Category Added",
+  "subCategoryId": 1,
+  "subCategoryName": "Bob cut",
+  "subCategoryPrice": 400,
+  "vendorId": 20240001
+}`
   - **Description**: Returns a message confirming the successful addition of the sub-product or sub-service.
 
 ---
