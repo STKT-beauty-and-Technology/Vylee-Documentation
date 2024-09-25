@@ -13,3 +13,6 @@
  
 ![ShowAllSalon](https://github.com/user-attachments/assets/6c9d633b-286c-4e42-b1c1-376af7f24506)
 
+# Security Authentication And Authorization flow chart
+
+![SecurityFlow](https://github.com/user-attachments/assets/cf1bf1f3-66b5-44a5-8c66-8e0c79d00d91)
