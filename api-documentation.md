@@ -208,8 +208,9 @@ This API adds a sub-product or sub-service to a specific product category.
 - **Request Method**: `POST`
 
 - {
-  "subCategoryName": "string",
-  "price": 0
+ 
+  "subCategoryName": "DEMO",
+  "price": 500.12
 }
 - **Path Parameter**:
   - `productServiceId`: The ID of the product or service to which the sub-product or sub-service is being added.
