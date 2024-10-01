@@ -179,6 +179,22 @@ This API adds a new category to the listing service.
 }`
   - **Description**: Returns a message confirming the successful addition of the category.
 
+# Delete Category
+### Description:
+This API deletes a category to the listing service.
+
+- **Request URL**: `http://localhost:9090/listing-services/remove-category/categoryId/vendorId`
+- **Request Method**: `DELETE`
+  
+- **Response**: 
+  - **Type**: `{
+  "message": "MALE Category has been deleted.",
+  "vendorId": 20240001,
+  "categoryName": "MALE",
+  "categoryId": 2
+}`
+  - **Description**: Returns a message confirming the successful deletion of the category.
+
 ---
 ## for Getting All Category 
 - **Request URL**: `http://localhost:9090/listing-services/show/all/category`
