@@ -460,7 +460,165 @@ This API validates the OTP sent for password reset and allows setting a new pass
   "description": "string",
   "website": "string",
   "whatsAppNumber": 0
+
 }
+
+
+# Coupon Controller API Documentation
+
+## Base URL: `/coupons`
+
+## 1. Vendor Creates a Coupon
+
+**Endpoint:** `POST /coupons/vendor/create-coupon/{vendorId}`
+
+**Description:** Allows a vendor to create a coupon.
+
+**Request Parameters:**
+- `vendorId` (Path) - The ID of the vendor creating the coupon.
+
+**Request Body (JSON):**
+```json
+{
+  "couponName": "WELCOME10",
+  "couponPrice": 100,
+  "numberOfUsages": 10,
+  "numberOfDays": 30,
+  "isActive": true
+}
+```
+
+**Response:**
+- 200 OK if coupon creation is successful.
+- 400 Bad Request if invalid input data.
+- 500 Internal Server Error if any error occurs.
+
+## 2. Admin Creates a Coupon
+
+**Endpoint:** `POST /coupons/admin/create-coupon/{adminId}`
+
+**Description:** Allows an admin to create a coupon applicable for all vendors.
+
+**Request Parameters:**
+- `adminId` (Path) - The ID of the admin creating the coupon.
+
+**Request Body (JSON):**
+```json
+{
+  "couponName": "ADMIN50",
+  "couponPrice": 50,
+  "numberOfUsages": 20,
+  "numberOfDays": 15,
+  "isActive": true
+}
+```
+
+**Response:**
+- 200 OK if coupon creation is successful.
+- 400 Bad Request if invalid input data.
+- 500 Internal Server Error if any error occurs.
+
+## 3. Get All Coupons by Vendor ID
+
+**Endpoint:** `GET /coupons/vendor/all-coupons-by-vendorId/{vendorId}`
+
+**Description:** Fetches all coupons created by a specific vendor.
+
+**Request Parameters:**
+- `vendorId` (Path) - The ID of the vendor whose coupons are being fetched.
+
+**Response:**
+- 200 OK with a list of coupons.
+- 404 Not Found if no coupons are found.
+- 500 Internal Server Error if any error occurs.
+
+## 4. Customer Applies a Coupon
+
+**Endpoint:** `GET /coupons/customer/apply-coupon/{couponId}/{customerId}`
+
+**Description:** Allows a customer to apply a specific coupon.
+
+**Request Parameters:**
+- `couponId` (Path) - The ID of the coupon being applied.
+- `customerId` (Path) - The ID of the customer applying the coupon.
+
+**Response:**
+- 200 OK if the coupon is successfully applied.
+- 400 Bad Request if the coupon is invalid or already used.
+- 500 Internal Server Error if any error occurs.
+
+## 5. Get All Coupons by Admin ID
+
+**Endpoint:** `GET /coupons/admin/all-coupons-by-vendorId/{adminId}`
+
+**Description:** Fetches all coupons created by an admin and applicable to all vendors.
+
+**Request Parameters:**
+- `adminId` (Path) - The ID of the admin whose coupons are being fetched.
+
+**Response:**
+- 200 OK with a list of coupons.
+- 404 Not Found if no coupons are found.
+- 500 Internal Server Error if any error occurs.
+
+## 6. Delete Expired Coupons for Vendor
+
+**Endpoint:** `DELETE /coupons/vendor/expiredCoupons/{statusCoupon}`
+
+**Description:** Deletes all expired coupons for a specific vendor.
+
+**Request Parameters:**
+- `statusCoupon` (Path) - Status of the expired coupons to delete.
+
+**Response:**
+- 200 OK if the coupons are successfully deleted.
+- 404 Not Found if no expired coupons are found.
+- 500 Internal Server Error if any error occurs.
+
+## 7. Delete a Vendor Coupon
+
+**Endpoint:** `DELETE /coupons/vendor/delete-coupon/{couponId}/{vendorId}`
+
+**Description:** Allows a vendor to delete a specific coupon they created.
+
+**Request Parameters:**
+- `couponId` (Path) - The ID of the coupon to delete.
+- `vendorId` (Path) - The ID of the vendor deleting the coupon.
+
+**Response:**
+- 200 OK if the coupon is successfully deleted.
+- 404 Not Found if the coupon does not exist.
+- 500 Internal Server Error if any error occurs.
+
+## 8. Delete Expired Coupons for Admin
+
+**Endpoint:** `DELETE /coupons/admin/expiredCoupons/{statusCoupon}`
+
+**Description:** Deletes all expired coupons applicable to all vendors, created by the admin.
+
+**Request Parameters:**
+- `statusCoupon` (Path) - Status of the expired coupons to delete.
+
+**Response:**
+- 200 OK if the coupons are successfully deleted.
+- 404 Not Found if no expired coupons are found.
+- 500 Internal Server Error if any error occurs.
+
+## 9. Delete an Admin Coupon
+
+**Endpoint:** `DELETE /coupons/admin/delete-coupon/{couponId}/{adminId}`
+
+**Description:** Allows an admin to delete a specific coupon they created.
+
+**Request Parameters:**
+- `couponId` (Path) - The ID of the coupon to delete.
+- `adminId` (Path) - The ID of the admin deleting the coupon.
+
+**Response:**
+- 200 OK if the coupon is successfully deleted.
+- 404 Not Found if the coupon does not exist.
+- 500 Internal Server Error if any error occurs.
+
   
   ----------------------------------------------------------------------------------------------------------------------------
   
