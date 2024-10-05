@@ -496,7 +496,7 @@ This API validates the OTP sent for password reset and allows setting a new pass
   "couponName": "WELCOME10",
   "couponPrice": 100,
   "couponCreationTime": "2024-10-05",
-  "couponExpirationTime": "2024-11-04",
+  "couponExpirationTime": "2024-11-06",
   "numberOfUsages": 10,
   "numberOfDays": 1
 }
@@ -592,6 +592,7 @@ This API validates the OTP sent for password reset and allows setting a new pass
 - `adminId` (Path) - The ID of the admin whose coupons are being fetched.
 
 **Response:** NOTE: return all vendors details belong to admin coupon
+
 {
     "couponId": 5,
     "adminId": 121212,
