@@ -483,12 +483,24 @@ This API validates the OTP sent for password reset and allows setting a new pass
   "couponName": "WELCOME10",
   "couponPrice": 100,
   "numberOfUsages": 10,
-  "numberOfDays": 30,
+  "numberOfDays": 1,
   "isActive": true
 }
 ```
 
 **Response:**
+{
+  "message": "New Coupon Created",
+  "couponId": 6,
+  "vendorId": 1121212,
+  "couponName": "WELCOME10",
+  "couponPrice": 100,
+  "couponCreationTime": "2024-10-05",
+  "couponExpirationTime": "2024-11-04",
+  "numberOfUsages": 10,
+  "numberOfDays": 1
+}
+
 - 200 OK if coupon creation is successful.
 - 400 Bad Request if invalid input data.
 - 500 Internal Server Error if any error occurs.
@@ -507,13 +519,24 @@ This API validates the OTP sent for password reset and allows setting a new pass
 {
   "couponName": "ADMIN50",
   "couponPrice": 50,
-  "numberOfUsages": 20,
-  "numberOfDays": 15,
+  "numberOfUsages": 2,
+  "numberOfDays": 1,
   "isActive": true
 }
 ```
 
 **Response:**
+{
+  "message": "Admin coupon created and assigned to all vendors.",
+  "couponId": 5,
+  "couponName": "ADMIN50",
+  "couponPrice": 50,
+  "couponCreationTime": "2024-10-05",
+  "couponExpirationTime": "2024-10-06",
+  "numberOfUsages": 2,
+  "numberOfDays": 1,
+  "adminId": 121212
+}
 - 200 OK if coupon creation is successful.
 - 400 Bad Request if invalid input data.
 - 500 Internal Server Error if any error occurs.
@@ -528,6 +551,18 @@ This API validates the OTP sent for password reset and allows setting a new pass
 - `vendorId` (Path) - The ID of the vendor whose coupons are being fetched.
 
 **Response:**
+{
+    "couponId": 4,
+    "vendorId": 20240001,
+    "couponName": "FIRST60",
+    "couponPrice": 40,
+    "couponCreationTime": "2024-10-08",
+    "couponExpirationTime": "2024-10-09",
+    "numberOfUsages": 3,
+    "currentUsages": 1,
+    "numberOfDays": 1,
+    "active": true
+  }
 - 200 OK with a list of coupons.
 - 404 Not Found if no coupons are found.
 - 500 Internal Server Error if any error occurs.
@@ -556,7 +591,52 @@ This API validates the OTP sent for password reset and allows setting a new pass
 **Request Parameters:**
 - `adminId` (Path) - The ID of the admin whose coupons are being fetched.
 
-**Response:**
+**Response:** NOTE: return all vendors details belong to admin coupon
+{
+    "couponId": 5,
+    "adminId": 121212,
+    "couponName": "WELCOME",
+    "couponPrice": 50,
+    "couponCreationTime": "2024-10-05",
+    "couponExpirationTime": "2024-10-06",
+    "numberOfUsages": 2,
+    "numberOfDays": 1,
+    "applicableForAllVendors": true,
+    "applicableVendors": [
+      {
+        "vendorId": 6,
+        "message": "fsfsfsf",
+        "salonName": "fsfsf",
+        "fullName": "sfsfsf",
+        "vendorEmail": "fsfsfsf",
+        "password": null,
+        "mobileNumber": null,
+        "vendorAddress": null,
+        "vendorCountry": null,
+        "vendorState": null,
+        "vendorCity": null,
+        "pincode": null,
+        "description": null,
+        "website": null,
+        "whatsAppNumber": null
+      },
+      {
+        "vendorId": 3,
+        "message": "fsfsfsf",
+        "salonName": "fsfsf",
+        "fullName": "sfsfsf",
+        "vendorEmail": "fsfsfsf",
+        "password": null,
+        "mobileNumber": null,
+        "vendorAddress": null,
+        "vendorCountry": null,
+        "vendorState": null,
+        "vendorCity": null,
+        "pincode": null,
+        "description": null,
+        "website": null,
+        "whatsAppNumber": null
+      },
 - 200 OK with a list of coupons.
 - 404 Not Found if no coupons are found.
 - 500 Internal Server Error if any error occurs.
