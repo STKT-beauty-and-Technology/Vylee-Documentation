@@ -406,6 +406,13 @@ This API validates the OTP sent for password reset and allows setting a new pass
 - **Response**: 
   - **Type**: `String`
 
+## Change Bank Account Primary & Secondary
+
+Request URL**: `http://localhost:9090/listing-services/update/bank-account-selection/bankId/vendorId/primary`
+- **Request Method**: `PUT`  
+- **Response**: 
+  - **Type**: `String`
+
 ## 18.Get Bank Account
 
 - **Request URL**: `http://localhost:9090/listing-services/get/all-bank-deatils/vendorId`
