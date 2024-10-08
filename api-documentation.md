@@ -252,7 +252,28 @@ This API adds a sub-product or sub-service to a specific product category.
 }`
   - **Description**: Returns a message confirming the successful addition of the sub-product or sub-service.
 
+## Update SubcategoryProduct price
+
+### Description:
+This API update a sub-product or sub-service product price  to a specific product category.
+
+- **Request URL**: `http://localhost:9090/listing-services/update/sub-category/product-price/subCategoryId/price/vendorId`
+- **Request Method**: `PUT`
+
+
+- **Response**: 
+  - **Type**: `{
+  "message": "Price updated successfully",
+  "subCategoryId": 1,
+  "subCategoryName": "Bob cut",
+  "subCategoryPrice": 333,
+  "vendorId": 20240001
+}`
+  
+
 ---
+
+
 
 ## 11. Show All Data by Category (e.g., FEMALE, MALE, OTHERS)
 
@@ -377,6 +398,13 @@ This API validates the OTP sent for password reset and allows setting a new pass
   "mobileNumber": 0,
   "address": "string"
 }`
+
+## Delete Bank Account
+
+- **Request URL**: `http://localhost:9090/listing-services/delete/bank-account/vendorId/bankAccountId`
+- **Request Method**: `DELETE`  
+- **Response**: 
+  - **Type**: `String`
 
 ## 18.Get Bank Account
 
