@@ -2,7 +2,8 @@
 # API Documentation 
  * Backend server : http://54.224.210.106:9090/swagger-ui/index.html
 # Server-IP- http://54.224.210.106:9090 (prefix)
-# GET ALL VENDORS this is ADMIN URL : http://localhost:9090/vendor/get-all/vendors
+* GET ALL VENDORS This is ADMIN URL :
+* If you need to check how many vendors are registered in the app click this url : http://54.224.210.106:9090/vendor/get-all/vendors
 # example for testing http://localhost:9090/vendor/new/registration
 TO
 # http://54.172.41.93:9090/vendor/new/registration
