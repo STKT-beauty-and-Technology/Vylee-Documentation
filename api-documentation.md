@@ -201,6 +201,28 @@ This API deletes a category to the listing service.
 ## for Getting All Category 
 - **Request URL**: `http://localhost:9090/listing-services/show/all/category`
 -  **Request Method**: `GET`
+-  **Response** 
+-    **Type**: `{
+-[
+  {
+    "categoryId": 5,
+    "categoryName": "MALE",
+    "vendorId": 20240005,
+    "serviceProducts": [
+      {
+        "serviceId": 2,
+        "serviceName": "lajsij",
+        "subCategories": [
+          {
+            "subCategoryId": 2,
+            "subCategoryName": "jxds",
+            "price": 64356
+          }
+        ]
+      }
+    ]
+  }
+-    }`
 
 ## 9. Add Product or Service Inside Category
 
