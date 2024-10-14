@@ -7,7 +7,7 @@
 
  https://github.com/STKT-beauty-and-Technology/Vylee-Project-Backend-Docx/blob/master/api-documentation.md
 
- # BACKEND CUSTOMER
+ # BACKEND VENDOR/CUSTOMER
 
  # flow of salon services
  
