@@ -758,6 +758,116 @@ Request URL**: `http://localhost:9090/listing-services/update/bank-account-selec
 - 404 Not Found if the coupon does not exist.
 - 500 Internal Server Error if any error occurs.
 
+
+## New APIs for vendor app (24-10-24)
+
+## Get All Salon Details
+* **Request URL**: `http://54.224.210.106:9090/listing-services/get/allsalondetails`
+* **Request Method**: `GET`
+* **Response**:
+  ```json
+  {
+    "vendorId": 20240002,
+    "salonName": "John Styles",
+    "categories": [
+      {
+        "categoryName": "FEMALE",
+        "services": [],
+        "subCategories": []
+      },
+      {
+        "categoryName": "MALE",
+        "services": [
+          "hair "
+        ],
+        "subCategories": [
+          {
+            "subCategoryName": "colour ",
+            "price": 999
+          }
+        ]
+      }
+    ],
+    "amenities": [],
+    "imageCount": 3
+  }
+  ```
+
+## Add New Amenity
+* **Request URL**: `http://54.224.210.106:9090/listing-services/add-new-amenity/{vendorId}/{amenity}`
+* **Request Method**: `POST`
+* **Parameters**:
+  * vendorId (required): Unique identifier for the salon
+  * amenityName (required): Name of the amenity to be added
+* **Response**:
+  ```json
+  {
+    "message": "Amenity added to salon successfully",
+    "vendorId": 20240001,
+    "salonName": "Vivek Men Salon",
+    "amenities": "FREE PARKING"
+  }
+  ```
+
+## Get Working Hours
+* **Request URL**: `http://54.224.210.106:9090/listing-services/get-working-hours/{vendorId}`
+* **Request Method**: `GET`
+* **Parameters**:
+  * vendorId (required): Unique identifier for the salon
+* **Response**:
+  ```json
+  [
+    {
+      "id": 1,
+      "vendorId": 20240001,
+      "day": "MON",
+      "openTime": "09:00",
+      "closeTime": "05:00"
+    },
+    {
+      "id": 2,
+      "vendorId": 20240001,
+      "day": "TUE",
+      "openTime": "09:00",
+      "closeTime": "05:00"
+    },
+    {
+      "id": 3,
+      "vendorId": 20240001,
+      "day": "WED",
+      "openTime": "09:00",
+      "closeTime": "05:00"
+    },
+    {
+      "id": 4,
+      "vendorId": 20240001,
+      "day": "THU",
+      "openTime": "09:00",
+      "closeTime": "05:00"
+    },
+    {
+      "id": 5,
+      "vendorId": 20240001,
+      "day": "FRI",
+      "openTime": "09:00",
+      "closeTime": "05:00"
+    },
+    {
+      "id": 6,
+      "vendorId": 20240001,
+      "day": "SAT",
+      "openTime": "09:00",
+      "closeTime": "05:00"
+    },
+    {
+      "id": 7,
+      "vendorId": 20240001,
+      "day": "SUN",
+      "openTime": "09:00",
+      "closeTime": "05:00"
+    }
+  ]
+  ```
   
   ----------------------------------------------------------------------------------------------------------------------------
   
