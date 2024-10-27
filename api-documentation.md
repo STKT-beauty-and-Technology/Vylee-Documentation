@@ -502,26 +502,30 @@ Request URL**: `http://localhost:9090/listing-services/update/bank-account-selec
 ## 22.Get vendor details based on vendorId
 
 - **Request URL**: `http://localhost:9090/vendor/get/vendor-details/vendorId`
-- **Request Method**: `POST`
+- **Request Method**: `GET`
   
 
 - **Response**: 
   - **Type**: {
-  "message": "string",
-  "vendorRegistrationId": 0,
-  "salonName": "string",
-  "fullName": "string",
-  "vendorEmail": "string",
-  "password": "string",
-  "mobileNumber": 0,
-  "vendorAddress": "string",
-  "vendorCountry": "string",
-  "vendorState": "string",
-  "vendorCity": "string",
-  "pincode": 0,
-  "description": "string",
-  "website": "string",
-  "whatsAppNumber": 0
+  ""message": "Vendor details found!",
+  "vendorRegistrationId": 20240001,
+  "salonName": "Vivek Men Salon",
+  "fullName": "Vivek Raikawar",
+  "vendorEmail": "vivekckt1997@gmail.com",
+  "password": "1234",
+  "longitude": null,
+  "latitude": null,
+  "mobileNumber": null,
+  "vendorAddress": "New delhi",
+  "vendorCountry": "India",
+  "vendorState": "Haryana",
+  "vendorCity": "Gurugram",
+  "pincode": 122017,
+  "description": null,
+  "website": null,
+  "whatsAppNumber": null,
+  "creationDate": null,
+  "modifiedDate": null
 
 }
 
