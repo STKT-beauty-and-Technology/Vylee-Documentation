@@ -188,7 +188,7 @@ This document provides detailed information about the entity classes used in the
 
 ---
 
-## 3. Entity Relationships <a name="entity-relationships"></a>
+## 3. Entity Relationships <a name="entity-relationships"></a> Database relationship
 
 ### One-to-Many Relationships
 1. ServiceCategory → ServiceProduct
@@ -242,5 +242,4 @@ This document provides detailed information about the entity classes used in the
 
 ---
 
-*Note: This documentation is subject to updates and modifications as the system evolves.*
 
