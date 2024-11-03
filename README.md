@@ -11,6 +11,10 @@
 
  https://github.com/STKT-beauty-and-Technology/Vylee-Project-Backend-Docx/blob/master/entity-documentation.md
 
+ 4-Backend DB Tables Relationships
+
+ https://github.com/STKT-beauty-and-Technology/Vylee-Project-Backend-Docx/blob/master/db%20table%20relationships.png
+
  # BACKEND VENDOR/CUSTOMER
 
  # flow of salon services
