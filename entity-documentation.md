@@ -1,4 +1,4 @@
-# Salon Management System - Entity Documentation
+# VYLEE Salon Management System - Entity Documentation
 ## Version 1.0
 ### Table of Contents
 1. [Introduction](#introduction)
@@ -188,7 +188,7 @@ This document provides detailed information about the entity classes used in the
 
 ---
 
-## 3. Entity Relationships <a name="entity-relationships"></a> Database relationship
+## 3. Entity Relationships <a name="entity-relationships"></a> (Database Relationship)
 
 ### One-to-Many Relationships
 1. ServiceCategory → ServiceProduct
