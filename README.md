@@ -7,6 +7,10 @@
 
  https://github.com/STKT-beauty-and-Technology/Vylee-Project-Backend-Docx/blob/master/api-documentation.md
 
+ 3- Backend Entity Documentation
+
+ https://github.com/STKT-beauty-and-Technology/Vylee-Project-Backend-Docx/blob/master/entity-documentation.md
+
  # BACKEND VENDOR/CUSTOMER
 
  # flow of salon services
